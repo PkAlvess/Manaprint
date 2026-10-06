@@ -1,0 +1,91 @@
+.titulos {
+    font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+body {
+    background-color: rgb(44, 46, 46);
+}
+
+.paragrafos {
+    text-align: center;
+    color: white;
+}
+
+.caixa {
+    width: 29%;
+    height: 300px;
+    background-color: rgb(66, 70, 70);
+    display: block;
+    margin: auto;
+    resize: vertical;
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.botao {
+    margin-top: 10px;
+    margin-left: 35.48%;
+    display: block;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(66, 70, 70);
+    border-radius: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    color: white;
+    transition: box-shadow 0.3s ease;
+}
+
+.botao:hover {
+    box-shadow:
+        0 0 10px #2563eb,
+        0 0 20px #2563eb,
+        0 0 30px #2563eb;
+}
+
+/* ===================================================
+   NOVOS ESTILOS PARA A LISTA E IMAGENS DAS CARTAS
+   =================================================== */
+
+/* Container geral onde as cartas são inseridas */
+#lista-cartas {
+    display: flex;
+    flex-wrap: wrap;             /* Permite que as cartas pulem linha quando faltar espaço */
+    gap: 20px;                   /* Espaço entre cada carta */
+    justify-content: center;     /* Centraliza o grid de cartas na tela */
+    max-width: 1200px;           /* Limite de largura para não esticar demais em telas ultrawide */
+    margin: 30px auto;           /* Centraliza o container na página */
+    padding: 0 10px;
+}
+
+/* Bloco individual de cada carta */
+.card-item {
+    display: flex;
+    flex-direction: column;      /* Texto em cima, imagem embaixo */
+    align-items: center;         /* Centraliza a imagem e o texto */
+    width: calc(20% - 16px);     /* Divide em 5 colunas perfeitamente (100% / 5 = 20%) */
+    min-width: 130px;            /* Tamanho mínimo para não quebrar em telas muito pequenas */
+    box-sizing: border-box;
+}
+
+/* Imagem da carta */
+.card-item img.card-image {
+    width: 100%;                 /* Preenche a largura total do container (calc 20%) */
+    max-width: 180px;            /* Limite de tamanho para ficar bem ajustado */
+    height: auto;                /* Mantém a proporção oficial da carta de Magic */
+    border-radius: 8px;          /* Bordas arredondadas nas pontas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra suave */
+}
+
+/* Ajuste no texto para caber bem em colunas menores */
+.card-item p {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.85rem;          /* Fonte um pouco menor para caber melhor em 5 colunas */
+    margin-bottom: 6px;
+    text-align: center;
+}
